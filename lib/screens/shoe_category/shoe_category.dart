@@ -13,8 +13,12 @@ class _ShoeCategoryState extends State<ShoeCategory> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            title: const Text('Shoe Catalog'), backgroundColor: kPrimaryColor),
-        body: ListView(children: [
+            title: const Text(
+              'Shoe Catalog',
+              style: TextStyle(fontWeight: FontWeight.w400),
+            ),
+            backgroundColor: kPrimaryColor),
+        body: ListView(children: const [
           Text('Shoe Category'),
         ]));
   }
