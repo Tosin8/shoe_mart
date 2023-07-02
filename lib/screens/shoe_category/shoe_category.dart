@@ -10,6 +10,11 @@ class ShoeCategory extends StatefulWidget {
 class _ShoeCategoryState extends State<ShoeCategory> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+        appBar: AppBar(
+            title: const Text('Shoe Catalog'), backgroundColor: Colors.yellow),
+        body: ListView(children: [
+          Text('Shoe Category'),
+        ]));
   }
 }
