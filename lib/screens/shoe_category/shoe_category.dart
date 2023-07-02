@@ -18,8 +18,28 @@ class _ShoeCategoryState extends State<ShoeCategory> {
               style: TextStyle(fontWeight: FontWeight.w400),
             ),
             backgroundColor: kPrimaryColor),
-        body: ListView(children: const [
-          Text('Shoe Category'),
+        body: ListView(children: [
+          Container(
+            padding: const EdgeInsets.all(2),
+            height: 120,
+            child: Card(
+              child: Row(
+                children: [
+                  Image.asset('assets/products/shoe1.jpg'),
+                  Expanded(
+                      child: Column(
+                    children: [
+                      Text(
+                        'Nike Shoe 1',
+                        style: TextStyle(fontWeight: FontWeight.w600),
+                      ),
+                      Text('Price'),
+                    ],
+                  ))
+                ],
+              ),
+            ),
+          )
         ]));
   }
 }
