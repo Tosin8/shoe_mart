@@ -18,7 +18,9 @@ class _ShoeCategoryState extends State<ShoeCategory> {
               style: TextStyle(fontWeight: FontWeight.w400),
             ),
             backgroundColor: kPrimaryColor),
-        body: ListView(children: [Product_Details()]));
+        body: ListView(
+          children: [
+            Product_Details()]));
   }
 }
 
@@ -46,17 +48,18 @@ class Product_Details extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Image.asset('assets/products/shoe1.jpg'),
-            const Expanded(
+            Image.asset('assets/products/$image'),
+            Expanded(
                 child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Text(
-                  'Nike Shoe 1',
-                  style: TextStyle(fontWeight: FontWeight.w600),
+                  name,
+                  style: const TextStyle(fontWeight: FontWeight.w600),
                 ),
-                Text('Made with thick fibre materials'),
-                Text('Price'),
+                Text(description,
+                style: const TextStyle(fontWeight: FontWeight.bold),
+                Text(this.price, style: const TextStyle(fontWeight: FontWeight.w400),
               ],
             ))
           ],
