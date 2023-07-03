@@ -18,26 +18,32 @@ class _ShoeCategoryState extends State<ShoeCategory> {
               style: TextStyle(fontWeight: FontWeight.w400),
             ),
             backgroundColor: kPrimaryColor),
-        body: ListView(
-          children: [
-            Product_Details()]));
+        body: ListView(children: const [
+          Product_Details(
+            image: 'assets/images/shoe1.jpg',
+            name: 'Shoe 1',
+            description: '',
+            price: 100,
+          ),
+        ]));
   }
 }
 
+// ignore: camel_case_types
 class Product_Details extends StatelessWidget {
   const Product_Details({
     super.key,
     required this.name,
     required this.image,
     required this.price,
-    required this.rating,
+    //required this.rating,
     required this.description,
   });
 
   final String name;
   final String image;
   final int price;
-  final int rating;
+  // final int rating;
   final String description;
   @override
   Widget build(BuildContext context) {
@@ -57,9 +63,12 @@ class Product_Details extends StatelessWidget {
                   name,
                   style: const TextStyle(fontWeight: FontWeight.w600),
                 ),
-                Text(description,
-                style: const TextStyle(fontWeight: FontWeight.bold),
-                Text(this.price, style: const TextStyle(fontWeight: FontWeight.w400),
+                Text(
+                  description,
+                  style: const TextStyle(fontWeight: FontWeight.bold),
+                ),
+                Text(price.toString(),
+                    style: const TextStyle(fontWeight: FontWeight.w400)),
               ],
             ))
           ],
