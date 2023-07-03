@@ -20,10 +20,10 @@ class _ShoeCategoryState extends State<ShoeCategory> {
             backgroundColor: kPrimaryColor),
         body: ListView(children: const [
           Product_Details(
-            image: 'assets/images/shoe1.jpg',
+            image: 'shoe1.jpg',
             name: 'Shoe 1',
-            description: '',
             price: 100,
+            ID: '1123011AJ',
           ),
         ]));
   }
@@ -36,15 +36,14 @@ class Product_Details extends StatelessWidget {
     required this.name,
     required this.image,
     required this.price,
-    //required this.rating,
-    required this.description,
+    required this.ID,
   });
 
   final String name;
   final String image;
   final int price;
-  // final int rating;
-  final String description;
+  final String ID;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -63,12 +62,10 @@ class Product_Details extends StatelessWidget {
                   name,
                   style: const TextStyle(fontWeight: FontWeight.w600),
                 ),
-                Text(
-                  description,
-                  style: const TextStyle(fontWeight: FontWeight.bold),
-                ),
                 Text(price.toString(),
                     style: const TextStyle(fontWeight: FontWeight.w400)),
+                Text('Product ID:$ID',
+                    style: const TextStyle(fontWeight: FontWeight.w100)),
               ],
             ))
           ],
