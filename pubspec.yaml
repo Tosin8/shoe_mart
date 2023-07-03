@@ -63,6 +63,13 @@ flutter:
      - assets/products/shoe1.jpg
      - assets/products/shoe2.jpg
      - assets/products/shoe3.jpg
+     - assets/icons/brands/adidas.png
+     - assets/icons/brands/air_jordan.png
+     - assets/icons/brands/gucci.png
+     - assets/icons/brands/nike.png
+     - assets/icons/brands/puma.png
+     - assets/icons/brands/new_balance.png
+     - assets/icons/brands/reebok.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
