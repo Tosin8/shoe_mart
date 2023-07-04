@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:shoe_store/widgets/constants.dart';
 
 class ShoeCategory extends StatefulWidget {
@@ -14,7 +15,31 @@ class _ShoeCategoryState extends State<ShoeCategory> {
     double displayWidth = MediaQuery.of(context).size.width;
     return Scaffold(
         // writing the navigation bar
-        bottomNavigationBar: Container(),
+        bottomNavigationBar: Container(
+          margin: EdgeInsets.all(displayWidth * .05),
+          height: displayWidth * .155,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(.1),
+                blurRadius: 30,
+                offset: const Offset(0, 10),
+                spreadRadius: 1,
+              ),
+            ],
+            borderRadius: BorderRadius.circular(50),
+          ),
+          child: ListView.builder(
+              itemBuilder: (context, index) => InkWell(
+                    onTap: () {
+                      setState(() {
+                        currentIndex = index;
+                        HapticFeedback.lightImpact();
+                      });
+                    },
+                  )),
+        ),
         appBar: AppBar(
             title: const Text(
               'Shoe Catalog',
