@@ -10,6 +10,7 @@ class ShoeCategory extends StatefulWidget {
 }
 
 class _ShoeCategoryState extends State<ShoeCategory> {
+  var currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     double displayWidth = MediaQuery.of(context).size.width;
@@ -31,6 +32,9 @@ class _ShoeCategoryState extends State<ShoeCategory> {
             borderRadius: BorderRadius.circular(50),
           ),
           child: ListView.builder(
+              itemCount: 4,
+              scrollDirection: Axis.horizontal,
+              padding: EdgeInsets.symmetric(horizontal: displayWidth * .02),
               itemBuilder: (context, index) => InkWell(
                     onTap: () {
                       setState(() {
@@ -38,6 +42,11 @@ class _ShoeCategoryState extends State<ShoeCategory> {
                         HapticFeedback.lightImpact();
                       });
                     },
+                    splashColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    child: Stack(
+                      children: [AnimatedContainer(duration: duration)],
+                    ),
                   )),
         ),
         appBar: AppBar(
