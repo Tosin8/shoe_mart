@@ -11,7 +11,10 @@ class ShoeCategory extends StatefulWidget {
 class _ShoeCategoryState extends State<ShoeCategory> {
   @override
   Widget build(BuildContext context) {
+    double displayWidth = MediaQuery.of(context).size.width;
     return Scaffold(
+        // writing the navigation bar
+        bottomNavigationBar: Container(),
         appBar: AppBar(
             title: const Text(
               'Shoe Catalog',
