@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:shoe_store/widgets/constants.dart';
+import 'package:shoe_store/widgets/navigation_bar.dart';
 
 
 class ShoeCategory extends StatefulWidget {
@@ -74,17 +75,32 @@ class _ShoeCategoryState extends State<ShoeCategory> {
             children: [
               AnimatedContainer(duration: const Duration(seconds: 1), 
               curve: Curves.fastLinearToSlowEaseIn, width: index == currentIndex ? displayWidth * .13 : 0,), AnimatedOpacity(opacity: index == currentIndex ? 1 : 0, duration: const Duration(seconds: 1), curve: Curves.fastLinearToSlowEaseIn,
-              child: Text((index == currentIndex) as String'\u0024{listOfStrings[index]}' : '',
-              style: TextStyle ),)
+              child: Text(index == currentIndex ?  '\u0024{listOfStrings[index]}' : '',
+              style: const TextStyle(color: Colors.blueAccent, fontWeight: FontWeight.w600, fontSize: 15) ),)
             ],
           )
         ],
       ),
-       )
-                      ],
-                    ),
-                  )),
+      Row(
+        children: [
+        AnimatedContainer(
+          duration: const Duration(seconds:1), 
+        curve: Curves.fastLinearToSlowEaseIn,
+        width: index == currentIndex ? displayWidth * .03 : 20,
+        ), 
+        Icon(listofIcons[index],
+        size: displayWidth * .076,
+        color: index == currentIndex ? Colors.blueAccent: Colors.black26, 
         ),
+      ],
+      ), 
+                      ], 
+       )
+                      
+                    ),
+                    
+                  )),
+        
         appBar: AppBar(
             title: const Text(
               'Shoe Catalog',
