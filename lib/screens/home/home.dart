@@ -10,6 +10,12 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        elevation: 1,
+        centerTitle: true,
+        title: Text('Home'),
+      ),
+    );
   }
 }
