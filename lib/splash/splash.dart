@@ -10,12 +10,51 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-          decoration: BoxDecoration(
+    return SafeArea(
+      child: Scaffold(
+        body: Container(
+            width: double.infinity,
+            decoration: const BoxDecoration(
               image: DecorationImage(
                   image: AssetImage('assets/splash_image.jpg'),
-                  fit: BoxFit.cover))),
+                  fit: BoxFit.cover),
+            ),
+            child: Container(
+              decoration: BoxDecoration(
+                  gradient: LinearGradient(colors: [
+                Colors.black.withOpacity(.9),
+                Colors.black.withOpacity(.4),
+              ], begin: Alignment.bottomRight)),
+              child: const Stack(children: [
+                Positioned(
+                  left: 15,
+                  child: Text(
+                    'Shoe\nMart',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.all(100.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Text(
+                        'Find your best collections',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 30),
+                      )
+                    ],
+                  ),
+                ),
+              ]),
+            )),
+      ),
     );
   }
 }
