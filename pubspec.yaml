@@ -70,8 +70,8 @@ flutter:
      - assets/icons/brands/puma.png
      - assets/icons/brands/new_balance.png
      - assets/icons/brands/reebok.png
+     - assets/splash_image.jpg
   #   - images/a_dot_ham.jpeg
-
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

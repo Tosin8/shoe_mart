@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shoe_store/splash/splash.dart';
 
 import 'screens/home/home.dart';
 import 'screens/shoe_category/shoe_category.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Home(),
+      home: const SplashScreen(),
     );
   }
 }
