@@ -37,18 +37,32 @@ class _SplashScreenState extends State<SplashScreen> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(100.0),
+                  padding: EdgeInsets.all(50.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Text(
                         'Find your best collections',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 30,
+                        ),
+                      ),
+                      SizedBox(height: 12),
+                      Text(
+                        'Brand New Perspective',
                         style: TextStyle(
                             color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 30),
-                      )
+                            fontWeight: FontWeight.w600,
+                            fontSize: 18),
+                      ),
+                      SizedBox(height: 12),
+                      Container(
+                        decoration: BoxDecoration(),
+                      ),
                     ],
                   ),
                 ),
