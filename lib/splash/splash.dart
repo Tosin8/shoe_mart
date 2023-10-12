@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'splash_widget.dart';
+
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
@@ -7,7 +9,24 @@ class SplashScreen extends StatefulWidget {
   State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen> {
+class _SplashScreenState extends State<SplashScreen>
+    with TickerProviderStateMixin {
+  late AnimationController _scaleController;
+  late Animation<double> _scaleAnimation;
+
+  bool hide = false;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+    _scaleController =
+        AnimationController(vsync: this, duration: Duration(milliseconds: 500));
+
+    _scaleAnimation = Tween<double>(begin: 1.0, end: 30.0);
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -27,13 +46,14 @@ class _SplashScreenState extends State<SplashScreen> {
               ], begin: Alignment.bottomRight)),
               child: const Stack(children: [
                 Positioned(
+                  top: 15,
                   left: 15,
                   child: Text(
-                    'Shoe\nMart',
+                    'Shoe Mart',
                     style: TextStyle(
                         color: Colors.white,
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold),
+                        fontSize: 14,
+                        fontWeight: FontWeight.w300),
                   ),
                 ),
                 Padding(
@@ -56,13 +76,13 @@ class _SplashScreenState extends State<SplashScreen> {
                         'Brand New Perspective',
                         style: TextStyle(
                             color: Colors.white,
-                            fontWeight: FontWeight.w600,
+                            fontWeight: FontWeight.w300,
                             fontSize: 18),
                       ),
                       SizedBox(height: 12),
-                      Container(
-                        decoration: BoxDecoration(),
-                      ),
+                      BtnStart(),
+                      SizedBox(height: 15),
+                      BtnLogin(),
                     ],
                   ),
                 ),
