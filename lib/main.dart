@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shoe_store/splash/splash.dart';
+
+import 'splash/splash.dart';
 
 void main() {
   runApp(const MyApp());
