@@ -1,5 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
+import 'package:shoe_store/screens/home/home.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -28,7 +30,10 @@ class _SplashScreenState extends State<SplashScreen>
         Tween<double>(begin: 1.0, end: 30.0).animate(_scaleController)
           ..addStatusListener((status) {
             if (status == AnimationStatus.completed) {
-              Navigator.push(context, route)
+              Navigator.push(
+                  context,
+                  PageTransition(
+                      child: const Home(), type: PageTransitionType.fade));
             }
           });
   }
