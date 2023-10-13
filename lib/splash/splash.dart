@@ -12,8 +12,8 @@ class _SplashScreenState extends State<SplashScreen>
     with TickerProviderStateMixin {
   bool isTapped = false;
 
-  AnimationController _scaleController;
-  Animation<double> _scaleAnimation;
+  late AnimationController _scaleController;
+  late Animation<double> _scaleAnimation;
 
   bool hide = false;
 
@@ -21,6 +21,11 @@ class _SplashScreenState extends State<SplashScreen>
   void initState() {
     // TODO: implement initState
     super.initState();
+
+    _scaleController = AnimationController(
+        vsync: this, duration: const Duration(milliseconds: 500));
+    _scaleAnimation =
+        Tween<double>(begin: 1.0, end: 30.0).animate(_scaleController);
   }
 
   @override
@@ -85,18 +90,32 @@ class _SplashScreenState extends State<SplashScreen>
                         ),
                         const SizedBox(height: 10),
                         InkWell(
-                          onTap: () {},
-                          child: Container(
-                              height: 50,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(50),
-                                  color: Colors.white),
-                              child: const Center(
-                                child: Text(
-                                  'Start Shopping ',
-                                  style: TextStyle(fontWeight: FontWeight.w500),
-                                ),
-                              )),
+                          onTap: () {
+                            setState(() {
+                              hide = true;
+                            });
+                            _scaleController.forward();
+                          },
+                          child: AnimatedBuilder(
+                            animation: _scaleController,
+                            builder: (context, child) => Transform.scale(
+                              scale: _scaleAnimation.value,
+                              child: Container(
+                                  height: 50,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(50),
+                                      color: Colors.white),
+                                  child: Center(
+                                    child: hide == false
+                                        ? const Text(
+                                            'Start Shopping ',
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.w500),
+                                          )
+                                        : Container(),
+                                  )),
+                            ),
+                          ),
                         ),
                         const SizedBox(height: 10),
                         InkWell(
