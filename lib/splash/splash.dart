@@ -11,11 +11,16 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen>
     with TickerProviderStateMixin {
   bool isTapped = false;
+  late final AnimationController _controller =
+      AnimationController(vsync: this, duration: Duration(seconds: 1));
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
           body: Container(
+              height: MediaQuery.of(context).size.height,
+              width: double.infinity,
               decoration: const BoxDecoration(
                   image: DecorationImage(
                 image: AssetImage('assets/image/splash_image.jpg'),
