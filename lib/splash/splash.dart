@@ -23,9 +23,12 @@ class _SplashScreenState extends State<SplashScreen>
     super.initState();
 
     _scaleController = AnimationController(
-        vsync: this, duration: const Duration(milliseconds: 500));
+        vsync: this, duration: const Duration(milliseconds: 800));
     _scaleAnimation =
-        Tween<double>(begin: 1.0, end: 30.0).animate(_scaleController);
+        Tween<double>(begin: 1.0, end: 30.0).animate(_scaleController)
+          ..addStatusListener((status) {
+            if (status == AnimationStatus.completed) {}
+          });
   }
 
   @override
