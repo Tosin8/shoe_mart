@@ -27,7 +27,9 @@ class _SplashScreenState extends State<SplashScreen>
     _scaleAnimation =
         Tween<double>(begin: 1.0, end: 30.0).animate(_scaleController)
           ..addStatusListener((status) {
-            if (status == AnimationStatus.completed) {}
+            if (status == AnimationStatus.completed) {
+              Navigator.push(context, route)
+            }
           });
   }
 
