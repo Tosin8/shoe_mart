@@ -55,29 +55,50 @@ class _SplashScreenState extends State<SplashScreen> {
                         AnimatedTextKit(
                           animatedTexts: [
                             TypewriterAnimatedText('Brand New Perspective',
-                                textStyle: TextStyle(
+                                textStyle: const TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.w300),
-                                speed: const Duration(milliseconds: 2000),
+                                speed: const Duration(milliseconds: 300),
                                 textAlign: TextAlign.center),
                           ],
-                          totalRepeatCount: 4,
-                          pause: const Duration(milliseconds: 1000),
+                          //  totalRepeatCount: 8,
+                          pause: const Duration(milliseconds: 500),
                           displayFullTextOnTap: true,
                           stopPauseOnTap: true,
+                          repeatForever: true,
                         ),
                         const SizedBox(height: 10),
-                        Container(
-                            height: 50,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(50),
-                                color: Colors.white),
-                            child: Center(
-                              child: Text(
-                                'Start Shopping ',
-                                style: TextStyle(fontWeight: FontWeight.w500),
-                              ),
-                            )),
+                        InkWell(
+                          onTap: () {},
+                          child: Container(
+                              height: 50,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(50),
+                                  color: Colors.white),
+                              child: const Center(
+                                child: Text(
+                                  'Start Shopping ',
+                                  style: TextStyle(fontWeight: FontWeight.w500),
+                                ),
+                              )),
+                        ),
+                        SizedBox(height: 10),
+                        InkWell(
+                          onTap: () {},
+                          child: Container(
+                              height: 50,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(50),
+                                  border: Border.all(color: Colors.white)),
+                              child: const Center(
+                                child: Text(
+                                  'Log In',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.white),
+                                ),
+                              )),
+                        ),
                       ],
                     ),
                   )
