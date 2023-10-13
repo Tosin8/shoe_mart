@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'widgets/splash.dart';
+import 'extensions/splash.dart';
 
 void main() {
   runApp(const MyApp());
