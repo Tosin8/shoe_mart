@@ -10,6 +10,7 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen>
     with TickerProviderStateMixin {
+  bool isTapped = false;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -83,11 +84,21 @@ class _SplashScreenState extends State<SplashScreen>
                                 ),
                               )),
                         ),
-                        SizedBox(height: 10),
+                        const SizedBox(height: 10),
                         InkWell(
+                          highlightColor: Colors.transparent,
+                          splashColor: Colors.transparent,
+                          onHighlightChanged: (value) {
+                            setState(() {
+                              isTapped = value;
+                            });
+                          },
                           onTap: () {},
-                          child: Container(
-                              height: 50,
+                          child: AnimatedContainer(
+                              duration: const Duration(milliseconds: 300),
+                              curve: Curves.fastLinearToSlowEaseIn,
+                              height: isTapped ? 50 : 55,
+                              width: isTapped ? 200 : 250,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(50),
                                   border: Border.all(color: Colors.white)),
