@@ -1,7 +1,11 @@
+import 'dart:io';
+
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:shoe_store/screens/home/home.dart';
+
+import 'forms/login/login.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -12,6 +16,10 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen>
     with TickerProviderStateMixin {
+  void closeAppUsingExit() {
+    exit(0);
+  }
+
   bool isTapped = false;
 
   late AnimationController _scaleController;
@@ -68,6 +76,11 @@ class _SplashScreenState extends State<SplashScreen>
                           color: Colors.white, fontWeight: FontWeight.w600),
                     ),
                   ),
+                  IconButton(
+                      onPressed: () {
+                        closeAppUsingExit();
+                      },
+                      icon: const Icon(Icons.power_off_outlined)),
                   Padding(
                     padding: const EdgeInsets.all(80.0),
                     child: Column(
@@ -136,7 +149,12 @@ class _SplashScreenState extends State<SplashScreen>
                               isTapped = value;
                             });
                           },
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const LogIn()));
+                          },
                           child: AnimatedContainer(
                               duration: const Duration(milliseconds: 300),
                               curve: Curves.fastLinearToSlowEaseIn,
