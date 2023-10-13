@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -51,11 +52,20 @@ class _SplashScreenState extends State<SplashScreen> {
                               fontWeight: FontWeight.bold),
                         ),
                         const SizedBox(height: 10),
-                        const Text('Brand New Perspective',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.w300),
-                            textAlign: TextAlign.center),
+                        AnimatedTextKit(
+                          animatedTexts: [
+                            TypewriterAnimatedText('Brand New Perspective',
+                                textStyle: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w300),
+                                speed: const Duration(milliseconds: 2000),
+                                textAlign: TextAlign.center),
+                          ],
+                          totalRepeatCount: 4,
+                          pause: const Duration(milliseconds: 1000),
+                          displayFullTextOnTap: true,
+                          stopPauseOnTap: true,
+                        ),
                         const SizedBox(height: 10),
                         Container(
                             height: 50,
