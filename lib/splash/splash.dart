@@ -11,8 +11,17 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen>
     with TickerProviderStateMixin {
   bool isTapped = false;
-  late final AnimationController _controller =
-      AnimationController(vsync: this, duration: Duration(seconds: 1));
+
+  AnimationController _scaleController;
+  Animation<double> _scaleAnimation;
+
+  bool hide = false;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
