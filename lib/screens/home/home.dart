@@ -29,16 +29,16 @@ class _HomeState extends State<Home> {
           padding: const EdgeInsets.all(10.0),
           child: ListView(
             children: [
-              Text(
+              const Text(
                 'Shoes Collections',
                 style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                     color: kAccentColor),
               ),
-              Text('The best of shoes in one place!',
+              const Text('The best of shoes in one place!',
                   style: TextStyle(color: kAccentColor)),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Container(
                 height: 50,
                 decoration: BoxDecoration(
@@ -48,25 +48,25 @@ class _HomeState extends State<Home> {
                     BoxShadow(
                         color: Colors.black.withOpacity(0.3),
                         blurRadius: 10,
-                        offset: Offset(2, 2))
+                        offset: const Offset(2, 2))
                   ],
                 ),
                 child: TextField(
                   controller: _searchController,
                   onChanged: (value) {},
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                       hintText: 'Search Product',
                       prefixIcon: Icon(Icons.search)),
                 ),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Container(
                 height: 150,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     color: kAccentColor),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -77,7 +77,13 @@ class _HomeState extends State<Home> {
                         fontSize: 18,
                         fontWeight: FontWeight.bold),
                   ),
-                  Text('See all'),
+                  GestureDetector(
+                    onTap: () {},
+                    child: Text(
+                      'See all',
+                      style: TextStyle(color: kSecondaryColor),
+                    ),
+                  ),
                 ],
               )
             ],
