@@ -3,7 +3,6 @@ import 'dart:io';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:shoe_store/extensions/constants.dart';
 import 'package:shoe_store/screens/home/home.dart';
 
 import 'forms/login/login.dart';
