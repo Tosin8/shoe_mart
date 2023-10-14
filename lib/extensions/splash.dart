@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:shoe_store/extensions/constants.dart';
 import 'package:shoe_store/screens/home/home.dart';
 
 import 'forms/login/login.dart';
@@ -73,14 +74,21 @@ class _SplashScreenState extends State<SplashScreen>
                     child: Text(
                       'Shoe Mart',
                       style: TextStyle(
-                          color: Colors.white, fontWeight: FontWeight.w600),
+                          color: Colors.white,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 16),
                     ),
                   ),
-                  IconButton(
-                      onPressed: () {
-                        closeAppUsingExit();
-                      },
-                      icon: const Icon(Icons.power_off_outlined)),
+                  Positioned(
+                    top: 10,
+                    right: 10,
+                    child: IconButton(
+                        onPressed: () {
+                          closeAppUsingExit();
+                        },
+                        icon: const Icon(Icons.power_settings_new,
+                            color: Colors.white)),
+                  ),
                   Padding(
                     padding: const EdgeInsets.all(80.0),
                     child: Column(
