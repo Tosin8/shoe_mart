@@ -9,6 +9,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  final TextEditingController _searchController = new TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,7 +51,34 @@ class _HomeState extends State<Home> {
                         offset: Offset(2, 2))
                   ],
                 ),
-                child: TextField(),
+                child: TextField(
+                  controller: _searchController,
+                  onChanged: (value) {},
+                  decoration: InputDecoration(
+                      hintText: 'Search Product',
+                      prefixIcon: Icon(Icons.search)),
+                ),
+              ),
+              SizedBox(height: 10),
+              Container(
+                height: 150,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: kAccentColor),
+              ),
+              SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Categories',
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  Text('See all'),
+                ],
               )
             ],
           ),
