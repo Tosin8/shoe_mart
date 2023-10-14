@@ -85,7 +85,32 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                 ],
-              )
+              ),
+              SizedBox(height: 10),
+              Container(
+                  height: 100,
+                  child: ListView(
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.white,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.5),
+                              spreadRadius: 1,
+                            )
+                          ],
+                        ),
+                        child: Stack(
+                          children: [
+                            Image.asset(
+                                'assets/products/Nike_Zoom_Pegasus_33_Shield.png')
+                          ],
+                        ),
+                      ),
+                    ],
+                  )),
             ],
           ),
         ));
