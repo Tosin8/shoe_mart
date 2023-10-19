@@ -52,76 +52,80 @@ class _HomeState extends State<Home> {
         ),
         body: Padding(
           padding: const EdgeInsets.all(10.0),
-          child: ListView(
-            children: [
-              const Text(
-                'Shoes Collections',
-                style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    color: kAccentColor),
-              ),
-              const Text('The best of shoes in one place!',
-                  style: TextStyle(color: kAccentColor)),
-              const SizedBox(height: 10),
-              searchBtn(searchController: _searchController),
-              const SizedBox(height: 10),
-              Container(
-                height: 150,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    color: kAccentColor),
-              ),
-              const SizedBox(height: 10),
-              DefaultTabController(length: 2,
-               child: TabBar(tabs: tabs)),
+          child: ListView(children: [
+            const Text(
+              'Shoes Collections',
+              style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  color: kAccentColor),
+            ),
+            const Text('The best of shoes in one place!',
+                style: TextStyle(color: kAccentColor)),
+            const SizedBox(height: 10),
+            searchBtn(searchController: _searchController),
+            const SizedBox(height: 10),
+            Container(
+              height: 150,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20), color: kAccentColor),
+            ),
+            const SizedBox(height: 10),
+            DefaultTabController(
+                length: 2,
+                child: TabBar(
+                  tabs: [
+                    Tab(
+                      child: Text('Hello'),
+                    )
+                  ],
+                )),
 
-              // Creating categories.
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const Text(
-                    'Categories',
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold),
+            // Creating categories.
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Text(
+                  'Categories',
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold),
+                ),
+                GestureDetector(
+                  onTap: () {},
+                  child: const Text(
+                    'See all',
+                    style: TextStyle(color: kSecondaryColor),
                   ),
-                  GestureDetector(
-                    onTap: () {},
-                    child: const Text(
-                      'See all',
-                      style: TextStyle(color: kSecondaryColor),
-                    ),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 10),
-              Container(
-                  height: 100,
-                  child: ListView(
-                    children: [
-                      Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Colors.white,
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black.withOpacity(0.5),
-                              spreadRadius: 1,
-                            )
-                          ],
-                        ),
-                        child: Stack(
-                          children: [
-                            Image.asset('assets/products/zoom_pegasus/blue.png')
-                          ],
-                        ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 10),
+            Container(
+                height: 100,
+                child: ListView(
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.white,
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.5),
+                            spreadRadius: 1,
+                          )
+                        ],
                       ),
-                    ],
-                  )),
-            ],
-          ),
+                      child: Stack(
+                        children: [
+                          Image.asset('assets/products/zoom_pegasus/blue.png')
+                        ],
+                      ),
+                    ),
+                  ],
+                )),
+          ]),
         ));
   }
 }
