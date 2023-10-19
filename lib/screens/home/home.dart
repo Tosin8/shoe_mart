@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shoe_store/extensions/constants.dart';
 
 class Home extends StatefulWidget {
@@ -30,7 +31,7 @@ class _HomeState extends State<Home> {
                   height: 30,
                   width: 30,
                   decoration: BoxDecoration(
-                    color: Colors.blue,
+                    color: Colors.white.withOpacity(0.8),
                     shape: BoxShape.circle,
                     boxShadow: [
                       BoxShadow(
@@ -42,7 +43,8 @@ class _HomeState extends State<Home> {
                 ),
               ),
               IconButton(
-                  onPressed: () {}, icon: const Icon(Icons.notifications))
+                  onPressed: () {},
+                  icon: SvgPicture.asset('assets/icons/bell.svg'))
             ]),
           ], // remove back button in appbar.
         ),
@@ -60,28 +62,7 @@ class _HomeState extends State<Home> {
               const Text('The best of shoes in one place!',
                   style: TextStyle(color: kAccentColor)),
               const SizedBox(height: 10),
-              Container(
-                height: 50,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(30),
-                  color: Colors.white,
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.black.withOpacity(0.3),
-                        blurRadius: 10,
-                        offset: const Offset(2, 2))
-                  ],
-                ),
-                child: TextField(
-                  controller: _searchController,
-                  onChanged: (value) {},
-                  decoration: const InputDecoration(
-                      enabledBorder: InputBorder.none,
-                      focusedBorder: InputBorder.none,
-                      hintText: 'Search Product',
-                      prefixIcon: Icon(Icons.search)),
-                ),
-              ),
+              searchBtn(searchController: _searchController),
               const SizedBox(height: 10),
               Container(
                 height: 150,
@@ -140,3 +121,4 @@ class _HomeState extends State<Home> {
         ));
   }
 }
+
