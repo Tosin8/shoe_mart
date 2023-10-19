@@ -23,11 +23,23 @@ class _HomeState extends State<Home> {
           automaticallyImplyLeading: false,
           actions: [
             Stack(children: [
-              Container(
-                height: 30,
-                width: 30,
-                decoration:
-                    BoxDecoration(shape: BoxShape.circle, color: Colors.blue),
+              Positioned(
+                top: 10,
+                left: 8,
+                child: Container(
+                  height: 30,
+                  width: 30,
+                  decoration: BoxDecoration(
+                    color: Colors.blue,
+                    shape: BoxShape.circle,
+                    boxShadow: [
+                      BoxShadow(
+                          color: Colors.black.withOpacity(0.3),
+                          blurRadius: 10,
+                          offset: const Offset(2, 2))
+                    ],
+                  ),
+                ),
               ),
               IconButton(
                   onPressed: () {}, icon: const Icon(Icons.notifications))
