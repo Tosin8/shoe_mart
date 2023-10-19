@@ -66,46 +66,17 @@ class _HomeState extends State<Home> {
             searchBtn(searchController: _searchController),
             const SizedBox(height: 10),
             advertBanner(),
-            const SizedBox(height: 10),
-            DefaultTabController(
-                length: 7,
-                child: TabBar(
-                  onTap: (selectedTabIndex) {},
-                  isScrollable: true,
-                  tabs: const [
-                    Tab(
-                      child: Text('Adidas'),
-                    ),
-                    Tab(
-                      child: Text('Air Jordan'),
-                    ),
-                    Tab(
-                      child: Text('Gucci'),
-                    ),
-                    Tab(
-                      child: Text('New Balance'),
-                    ),
-                    Tab(
-                      child: Text('Nike'),
-                    ),
-                    Tab(
-                      child: Text('Puma'),
-                    ),
-                    Tab(
-                      child: Text('Reebok'),
-                    ),
-                  ],
-                )),
+            const SizedBox(height: 15),
 
             // Creating categories.
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 const Text(
-                  'Categories',
+                  'Recommended',
                   style: TextStyle(
                       color: Colors.black,
-                      fontSize: 18,
+                      fontSize: 16,
                       fontWeight: FontWeight.bold),
                 ),
                 GestureDetector(
@@ -119,19 +90,14 @@ class _HomeState extends State<Home> {
             ),
             const SizedBox(height: 10),
             Container(
-                height: 100,
+                height: 160,
                 child: ListView(
+                  scrollDirection: Axis.horizontal,
                   children: [
                     Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.white,
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black.withOpacity(0.5),
-                            spreadRadius: 1,
-                          )
-                        ],
                       ),
                       child: Stack(
                         children: [
@@ -141,9 +107,38 @@ class _HomeState extends State<Home> {
                     ),
                   ],
                 )),
+
+            // Tab
+            // DefaultTabController(
+            //     length: 7,
+            //     child: TabBar(
+            //       onTap: (selectedTabIndex) {},
+            //       isScrollable: true,
+            //       tabs: const [
+            //         Tab(
+            //           child: Text('Adidas'),
+            //         ),
+            //         Tab(
+            //           child: Text('Air Jordan'),
+            //         ),
+            //         Tab(
+            //           child: Text('Gucci'),
+            //         ),
+            //         Tab(
+            //           child: Text('New Balance'),
+            //         ),
+            //         Tab(
+            //           child: Text('Nike'),
+            //         ),
+            //         Tab(
+            //           child: Text('Puma'),
+            //         ),
+            //         Tab(
+            //           child: Text('Reebok'),
+            //         ),
+            //       ],
+            //     )),
           ]),
         ));
   }
-
-
 }
