@@ -22,7 +22,16 @@ class _HomeState extends State<Home> {
           ),
           automaticallyImplyLeading: false,
           actions: [
-            IconButton(onPressed: () {}, icon: const Icon(Icons.notifications)),
+            Stack(children: [
+              Container(
+                height: 30,
+                width: 30,
+                decoration:
+                    BoxDecoration(shape: BoxShape.circle, color: Colors.blue),
+              ),
+              IconButton(
+                  onPressed: () {}, icon: const Icon(Icons.notifications))
+            ]),
           ], // remove back button in appbar.
         ),
         body: Padding(
@@ -55,6 +64,8 @@ class _HomeState extends State<Home> {
                   controller: _searchController,
                   onChanged: (value) {},
                   decoration: const InputDecoration(
+                      enabledBorder: InputBorder.none,
+                      focusedBorder: InputBorder.none,
                       hintText: 'Search Product',
                       prefixIcon: Icon(Icons.search)),
                 ),
@@ -67,10 +78,12 @@ class _HomeState extends State<Home> {
                     color: kAccentColor),
               ),
               const SizedBox(height: 10),
+
+              // Creating categories.
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
+                  const Text(
                     'Categories',
                     style: TextStyle(
                         color: Colors.black,
@@ -79,14 +92,14 @@ class _HomeState extends State<Home> {
                   ),
                   GestureDetector(
                     onTap: () {},
-                    child: Text(
+                    child: const Text(
                       'See all',
                       style: TextStyle(color: kSecondaryColor),
                     ),
                   ),
                 ],
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Container(
                   height: 100,
                   child: ListView(
@@ -104,8 +117,7 @@ class _HomeState extends State<Home> {
                         ),
                         child: Stack(
                           children: [
-                            Image.asset(
-                                'assets/products/Nike_Zoom_Pegasus_33_Shield.png')
+                            Image.asset('assets/products/zoom_pegasus/blue.png')
                           ],
                         ),
                       ),
