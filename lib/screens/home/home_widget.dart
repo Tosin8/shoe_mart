@@ -34,3 +34,14 @@ class searchBtn extends StatelessWidget {
     );
   }
 }
+
+ClipRRect advertBanner() {
+  return ClipRRect(
+    borderRadius: BorderRadius.circular(12.0),
+    child: Image.asset(
+      'assets/image/banner.jpg',
+      fit: BoxFit.cover,
+      height: 150,
+    ),
+  );
+}

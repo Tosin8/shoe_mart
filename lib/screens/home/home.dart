@@ -65,19 +65,35 @@ class _HomeState extends State<Home> {
             const SizedBox(height: 10),
             searchBtn(searchController: _searchController),
             const SizedBox(height: 10),
-            Container(
-              height: 150,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20), color: kAccentColor),
-            ),
+            advertBanner(),
             const SizedBox(height: 10),
             DefaultTabController(
-                length: 2,
+                length: 7,
                 child: TabBar(
-                  tabs: [
+                  onTap: (selectedTabIndex) {},
+                  isScrollable: true,
+                  tabs: const [
                     Tab(
-                      child: Text('Hello'),
-                    )
+                      child: Text('Adidas'),
+                    ),
+                    Tab(
+                      child: Text('Air Jordan'),
+                    ),
+                    Tab(
+                      child: Text('Gucci'),
+                    ),
+                    Tab(
+                      child: Text('New Balance'),
+                    ),
+                    Tab(
+                      child: Text('Nike'),
+                    ),
+                    Tab(
+                      child: Text('Puma'),
+                    ),
+                    Tab(
+                      child: Text('Reebok'),
+                    ),
                   ],
                 )),
 
@@ -128,4 +144,6 @@ class _HomeState extends State<Home> {
           ]),
         ));
   }
+
+
 }
