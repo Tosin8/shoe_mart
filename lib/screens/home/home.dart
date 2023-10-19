@@ -73,6 +73,8 @@ class _HomeState extends State<Home> {
                     color: kAccentColor),
               ),
               const SizedBox(height: 10),
+              DefaultTabController(length: 2,
+               child: TabBar(tabs: tabs)),
 
               // Creating categories.
               Row(
