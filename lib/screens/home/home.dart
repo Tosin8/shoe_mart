@@ -94,13 +94,15 @@ class _HomeState extends State<Home> {
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: [
-                    Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.white,
-                      ),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
                       child: Stack(
                         children: [
+                          Container(
+                            decoration: BoxDecoration(
+                                color: Colors.pink,
+                                borderRadius: BorderRadius.circular(50)),
+                          ),
                           Image.asset('assets/products/zoom_pegasus/blue.png')
                         ],
                       ),
