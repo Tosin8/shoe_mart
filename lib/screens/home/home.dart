@@ -99,11 +99,13 @@ class _HomeState extends State<Home> {
                       child: Stack(
                         children: [
                           Container(
-                            decoration: BoxDecoration(
-                                color: Colors.pink,
-                                borderRadius: BorderRadius.circular(50)),
-                          ),
-                          Image.asset('assets/products/zoom_pegasus/blue.png')
+                              decoration: BoxDecoration(
+                                  color: Color.fromARGB(255, 22, 112, 185),
+                                  borderRadius: BorderRadius.circular(50)),
+                              child: Transform.rotate(
+                                  angle: 8,
+                                  child: Image.asset(
+                                      'assets/products/zoom_pegasus/blue.png')))
                         ],
                       ),
                     ),
