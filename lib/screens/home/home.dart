@@ -90,27 +90,25 @@ class _HomeState extends State<Home> {
             ),
             const SizedBox(height: 10),
             Container(
-                height: 160,
                 child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  children: [
-                    ClipRRect(
+              scrollDirection: Axis.horizontal,
+              children: [
+                Container(
+                    height: 160,
+                    decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      child: Stack(
-                        children: [
-                          Container(
-                              decoration: BoxDecoration(
-                                  color: Color.fromARGB(255, 22, 112, 185),
-                                  borderRadius: BorderRadius.circular(50)),
-                              child: Transform.rotate(
-                                  angle: 8,
-                                  child: Image.asset(
-                                      'assets/products/zoom_pegasus/blue.png')))
-                        ],
-                      ),
                     ),
-                  ],
-                )),
+                    child: Column(
+                      children: [
+                        Image.asset('assets/products/zoom_pegasus/1.png'),
+                        Text(
+                          'Nike Air Zoom',
+                          style: TextStyle(color: Colors.green),
+                        )
+                      ],
+                    ))
+              ],
+            )),
 
             // Tab
             // DefaultTabController(
