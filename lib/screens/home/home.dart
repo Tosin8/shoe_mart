@@ -90,62 +90,16 @@ class _HomeState extends State<Home> {
             ),
             const SizedBox(height: 10),
             Container(
-              width: 202,
-              height: 327,
-              decoration: BoxDecoration(
-                  color: Colors.white,
-                  boxShadow: const [
-                    BoxShadow(
-                        color: Color(0x3F000000),
-                        blurRadius: 4,
-                        offset: Offset(0, 4),
-                        spreadRadius: 0),
-                  ],
-                  borderRadius: BorderRadius.circular(23)),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+              height: 350,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
                 children: [
-                  Container(
-                      height: 182,
-                      width: 243,
-                      decoration: const BoxDecoration(
-                          image: DecorationImage(
-                        image: AssetImage('assets/products/zoom_pegasus/1.png'),
-                        fit: BoxFit.fill,
-                      ))),
-                  Text(
-                    'Nike Zoom Pegasus',
-                    style: TextStyle(
-                      color: Color(0xFF257074),
-                      fontSize: 16,
-                      fontFamily: 'Inter',
-                      fontWeight: FontWeight.w600,
-                      height: 0,
-                    ),
-                  ),
-                  Text(
-                    'Men’s Shoe',
-                    style: TextStyle(
-                      color: Color(0x99257074),
-                      fontSize: 16,
-                      fontFamily: 'Inter',
-                      fontWeight: FontWeight.w600,
-                      height: 0,
-                    ),
-                  ),
-                  Text(
-                    '3 Colors',
-                    style: TextStyle(
-                      color: Color(0x99257074),
-                      fontSize: 16,
-                      fontFamily: 'Inter',
-                      fontWeight: FontWeight.w600,
-                      height: 0,
-                    ),
-                  ),
+                  ProductCard(),
+                  ProductCard(),
+                  ProductCard(),
                 ],
               ),
-            )
+            ),
 
             // Tab
             // DefaultTabController(
@@ -179,5 +133,173 @@ class _HomeState extends State<Home> {
             //     )),
           ]),
         ));
+  }
+}
+
+class ProductCard extends StatefulWidget {
+  const ProductCard({super.key});
+
+  @override
+  State<ProductCard> createState() => _ProductCardState();
+}
+
+class _ProductCardState extends State<ProductCard> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 243,
+      height: 327,
+      child: Stack(
+        children: [
+          Positioned(
+            left: 21,
+            top: 0,
+            child: Container(
+              width: 202,
+              height: 327,
+              decoration: ShapeDecoration(
+                color: Color(0xFFF8F8F8),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(23),
+                ),
+                shadows: [
+                  BoxShadow(
+                    color: Color(0x3F000000),
+                    blurRadius: 4,
+                    offset: Offset(0, 4),
+                    spreadRadius: 0,
+                  )
+                ],
+              ),
+            ),
+          ),
+          Positioned(
+            left: 45,
+            top: 194,
+            child: Text(
+              'Nike Zoom Pegasus',
+              style: TextStyle(
+                color: Color(0xFF257074),
+                fontSize: 16,
+                fontFamily: 'Inter',
+                fontWeight: FontWeight.w600,
+                height: 0,
+              ),
+            ),
+          ),
+          Positioned(
+            left: 45,
+            top: 222,
+            child: Text(
+              'Men’s Shoe',
+              style: TextStyle(
+                color: Color(0x99257074),
+                fontSize: 16,
+                fontFamily: 'Inter',
+                fontWeight: FontWeight.w600,
+                height: 0,
+              ),
+            ),
+          ),
+          Positioned(
+            left: 45,
+            top: 249,
+            child: Text(
+              '3 Colors',
+              style: TextStyle(
+                color: Color(0x99257074),
+                fontSize: 16,
+                fontFamily: 'Inter',
+                fontWeight: FontWeight.w600,
+                height: 0,
+              ),
+            ),
+          ),
+          Positioned(
+            left: 45,
+            top: 286,
+            child: Text(
+              '\$80.00',
+              style: TextStyle(
+                color: Color(0x99F1178D),
+                fontSize: 16,
+                fontFamily: 'Inter',
+                fontWeight: FontWeight.w700,
+                height: 0,
+              ),
+            ),
+          ),
+          Positioned(
+            left: 0,
+            top: 8,
+            child: Container(
+              width: 243,
+              height: 182,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage("assets/products/zoom_pegasus/1.png"),
+                  fit: BoxFit.fill,
+                ),
+              ),
+            ),
+          ),
+          Positioned(
+            left: 174,
+            top: 277,
+            child: Container(
+              width: 36,
+              height: 36,
+              child: Stack(
+                children: [
+                  Positioned(
+                    left: 0,
+                    top: 0,
+                    child: Container(
+                      width: 36,
+                      height: 36,
+                      decoration: ShapeDecoration(
+                        color: Color(0xFF257074),
+                        shape: OvalBorder(),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    left: 17,
+                    top: 10,
+                    child: Container(
+                      width: 2,
+                      height: 18,
+                      decoration: ShapeDecoration(
+                        color: Colors.white,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(3)),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    left: 9,
+                    top: 20,
+                    child: Transform(
+                      transform: Matrix4.identity()
+                        ..translate(0.0, 0.0)
+                        ..rotateZ(-1.57),
+                      child: Container(
+                        width: 2,
+                        height: 18,
+                        decoration: ShapeDecoration(
+                          color: Colors.white,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(3)),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
