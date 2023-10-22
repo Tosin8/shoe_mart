@@ -90,21 +90,31 @@ class _HomeState extends State<Home> {
             ),
             const SizedBox(height: 10),
             Container(
-              decoration: BoxDecoration(boxShadow: [
-                BoxShadow(
-                    color: Colors.black.withOpacity(0.3),
-                    blurRadius: 1,
-                    spreadRadius: 3),
-              ], borderRadius: BorderRadius.circular(30)),
-              width: double.infinity / 2,
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  boxShadow: [
+                    BoxShadow(
+                        color: Colors.black.withOpacity(0.3),
+                        blurRadius: 6,
+                        offset: const Offset(2, 2),
+                        spreadRadius: 3),
+                  ],
+                  borderRadius: BorderRadius.circular(30)),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Image.asset('assets/products/zoom_pegasus/1.png'),
-                  Text(
-                    'Zoom Pegasus',
-                    style: TextStyle(color: kSecondaryColor),
+                  const Text(
+                    'Nike Zoom Pegasus',
+                    style: TextStyle(
+                        color: kSecondaryColor, fontWeight: FontWeight.w700),
                   ),
-                  Text('3 Colors')
+                  const Text(
+                    'Men\'s Shoe',
+                    style: TextStyle(
+                        color: kSecondaryColor, fontWeight: FontWeight.w400),
+                  ),
+                  const Text('3 Colors'),
                 ],
               ),
             )
