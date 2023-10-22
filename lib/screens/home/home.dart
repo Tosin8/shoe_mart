@@ -88,49 +88,51 @@ class _HomeState extends State<Home> {
                 ),
               ],
             ),
-            const SizedBox(height: 10),
+            const SizedBox(height: 6),
             Container(
               height: 350,
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: [
-                  ProductCard(),
-                  ProductCard(),
-                  ProductCard(),
+                  const ProductCard(),
+                  const ProductCard(),
+                  const ProductCard(),
                 ],
               ),
             ),
 
+            const SizedBox(height: 6),
+
             // Tab
-            // DefaultTabController(
-            //     length: 7,
-            //     child: TabBar(
-            //       onTap: (selectedTabIndex) {},
-            //       isScrollable: true,
-            //       tabs: const [
-            //         Tab(
-            //           child: Text('Adidas'),
-            //         ),
-            //         Tab(
-            //           child: Text('Air Jordan'),
-            //         ),
-            //         Tab(
-            //           child: Text('Gucci'),
-            //         ),
-            //         Tab(
-            //           child: Text('New Balance'),
-            //         ),
-            //         Tab(
-            //           child: Text('Nike'),
-            //         ),
-            //         Tab(
-            //           child: Text('Puma'),
-            //         ),
-            //         Tab(
-            //           child: Text('Reebok'),
-            //         ),
-            //       ],
-            //     )),
+            DefaultTabController(
+                length: 7,
+                child: TabBar(
+                  onTap: (selectedTabIndex) {},
+                  isScrollable: true,
+                  tabs: const [
+                    Tab(
+                      child: Text('Adidas'),
+                    ),
+                    Tab(
+                      child: Text('Air Jordan'),
+                    ),
+                    Tab(
+                      child: Text('Gucci'),
+                    ),
+                    Tab(
+                      child: Text('New Balance'),
+                    ),
+                    Tab(
+                      child: Text('Nike'),
+                    ),
+                    Tab(
+                      child: Text('Puma'),
+                    ),
+                    Tab(
+                      child: Text('Reebok'),
+                    ),
+                  ],
+                )),
           ]),
         ));
   }
@@ -144,6 +146,10 @@ class ProductCard extends StatefulWidget {
 }
 
 class _ProductCardState extends State<ProductCard> {
+  final String Productname;
+  final String Categoryname;
+  final String Categorycolor;
+  final int price;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -158,11 +164,11 @@ class _ProductCardState extends State<ProductCard> {
               width: 202,
               height: 327,
               decoration: ShapeDecoration(
-                color: Color(0xFFF8F8F8),
+                color: const Color(0xFFF8F8F8),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(23),
                 ),
-                shadows: [
+                shadows: const [
                   BoxShadow(
                     color: Color(0x3F000000),
                     blurRadius: 4,
@@ -173,7 +179,7 @@ class _ProductCardState extends State<ProductCard> {
               ),
             ),
           ),
-          Positioned(
+          const Positioned(
             left: 45,
             top: 194,
             child: Text(
@@ -187,7 +193,7 @@ class _ProductCardState extends State<ProductCard> {
               ),
             ),
           ),
-          Positioned(
+          const Positioned(
             left: 45,
             top: 222,
             child: Text(
@@ -201,7 +207,7 @@ class _ProductCardState extends State<ProductCard> {
               ),
             ),
           ),
-          Positioned(
+          const Positioned(
             left: 45,
             top: 249,
             child: Text(
@@ -215,7 +221,7 @@ class _ProductCardState extends State<ProductCard> {
               ),
             ),
           ),
-          Positioned(
+          const Positioned(
             left: 45,
             top: 286,
             child: Text(
@@ -235,7 +241,7 @@ class _ProductCardState extends State<ProductCard> {
             child: Container(
               width: 243,
               height: 182,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage("assets/products/zoom_pegasus/1.png"),
                   fit: BoxFit.fill,
@@ -257,7 +263,7 @@ class _ProductCardState extends State<ProductCard> {
                     child: Container(
                       width: 36,
                       height: 36,
-                      decoration: ShapeDecoration(
+                      decoration: const ShapeDecoration(
                         color: Color(0xFF257074),
                         shape: OvalBorder(),
                       ),
