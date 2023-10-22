@@ -90,31 +90,59 @@ class _HomeState extends State<Home> {
             ),
             const SizedBox(height: 10),
             Container(
+              width: 202,
+              height: 327,
               decoration: BoxDecoration(
                   color: Colors.white,
-                  boxShadow: [
+                  boxShadow: const [
                     BoxShadow(
-                        color: Colors.black.withOpacity(0.3),
-                        blurRadius: 6,
-                        offset: const Offset(2, 2),
-                        spreadRadius: 3),
+                        color: Color(0x3F000000),
+                        blurRadius: 4,
+                        offset: Offset(0, 4),
+                        spreadRadius: 0),
                   ],
-                  borderRadius: BorderRadius.circular(30)),
+                  borderRadius: BorderRadius.circular(23)),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Image.asset('assets/products/zoom_pegasus/1.png'),
-                  const Text(
+                  Container(
+                      height: 182,
+                      width: 243,
+                      decoration: const BoxDecoration(
+                          image: DecorationImage(
+                        image: AssetImage('assets/products/zoom_pegasus/1.png'),
+                        fit: BoxFit.fill,
+                      ))),
+                  Text(
                     'Nike Zoom Pegasus',
                     style: TextStyle(
-                        color: kSecondaryColor, fontWeight: FontWeight.w700),
+                      color: Color(0xFF257074),
+                      fontSize: 16,
+                      fontFamily: 'Inter',
+                      fontWeight: FontWeight.w600,
+                      height: 0,
+                    ),
                   ),
-                  const Text(
-                    'Men\'s Shoe',
+                  Text(
+                    'Men’s Shoe',
                     style: TextStyle(
-                        color: kSecondaryColor, fontWeight: FontWeight.w400),
+                      color: Color(0x99257074),
+                      fontSize: 16,
+                      fontFamily: 'Inter',
+                      fontWeight: FontWeight.w600,
+                      height: 0,
+                    ),
                   ),
-                  const Text('3 Colors'),
+                  Text(
+                    '3 Colors',
+                    style: TextStyle(
+                      color: Color(0x99257074),
+                      fontSize: 16,
+                      fontFamily: 'Inter',
+                      fontWeight: FontWeight.w600,
+                      height: 0,
+                    ),
+                  ),
                 ],
               ),
             )
