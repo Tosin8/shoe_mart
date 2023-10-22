@@ -90,6 +90,12 @@ class _HomeState extends State<Home> {
             ),
             const SizedBox(height: 10),
             Container(
+              decoration: BoxDecoration(boxShadow: [
+                BoxShadow(
+                    color: Colors.black.withOpacity(0.3),
+                    blurRadius: 1,
+                    spreadRadius: 3),
+              ], borderRadius: BorderRadius.circular(30)),
               width: double.infinity / 2,
               child: Column(
                 children: [
