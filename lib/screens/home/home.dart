@@ -12,7 +12,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  final TextEditingController _searchController = new TextEditingController();
+  final TextEditingController _searchController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -89,16 +89,18 @@ class _HomeState extends State<Home> {
               ],
             ),
             const SizedBox(height: 6),
-            Container(
+            SizedBox(
               height: 350,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: [
-                  const ProductCard(),
-                  const ProductCard(),
-                  const ProductCard(),
-                ],
-              ),
+              child:
+                  ListView(scrollDirection: Axis.horizontal, children: const [
+                ProductCard(
+                  productname: "Nike Zoom Pegasus",
+                  categoryname: "Men\'s Shoe",
+                  categorycolor: "3 Colors",
+                  image: "Assets/products/zoom_pegasus/1.png",
+                  price: 80,
+                ),
+              ]),
             ),
 
             const SizedBox(height: 6),
@@ -139,20 +141,27 @@ class _HomeState extends State<Home> {
 }
 
 class ProductCard extends StatefulWidget {
-  const ProductCard({super.key});
+  const ProductCard(
+      {super.key,
+      required String productname,
+      required String categoryname,
+      required String categorycolor,
+      required String image,
+      required int price});
 
   @override
   State<ProductCard> createState() => _ProductCardState();
 }
 
 class _ProductCardState extends State<ProductCard> {
-  final String Productname;
-  final String Categoryname;
-  final String Categorycolor;
-  final int price;
+  late final String productname;
+  late final String categoryname;
+  late final String categorycolor;
+  late final String image;
+  late final int price;
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: 243,
       height: 327,
       child: Stack(
@@ -179,12 +188,12 @@ class _ProductCardState extends State<ProductCard> {
               ),
             ),
           ),
-          const Positioned(
+          Positioned(
             left: 45,
             top: 194,
             child: Text(
-              'Nike Zoom Pegasus',
-              style: TextStyle(
+              productname,
+              style: const TextStyle(
                 color: Color(0xFF257074),
                 fontSize: 16,
                 fontFamily: 'Inter',
@@ -193,12 +202,12 @@ class _ProductCardState extends State<ProductCard> {
               ),
             ),
           ),
-          const Positioned(
+          Positioned(
             left: 45,
             top: 222,
             child: Text(
-              'Men’s Shoe',
-              style: TextStyle(
+              categoryname,
+              style: const TextStyle(
                 color: Color(0x99257074),
                 fontSize: 16,
                 fontFamily: 'Inter',
@@ -207,12 +216,12 @@ class _ProductCardState extends State<ProductCard> {
               ),
             ),
           ),
-          const Positioned(
+          Positioned(
             left: 45,
             top: 249,
             child: Text(
-              '3 Colors',
-              style: TextStyle(
+              categorycolor,
+              style: const TextStyle(
                 color: Color(0x99257074),
                 fontSize: 16,
                 fontFamily: 'Inter',
@@ -221,12 +230,12 @@ class _ProductCardState extends State<ProductCard> {
               ),
             ),
           ),
-          const Positioned(
+          Positioned(
             left: 45,
             top: 286,
             child: Text(
-              '\$80.00',
-              style: TextStyle(
+              price.toString(),
+              style: const TextStyle(
                 color: Color(0x99F1178D),
                 fontSize: 16,
                 fontFamily: 'Inter',
@@ -241,9 +250,9 @@ class _ProductCardState extends State<ProductCard> {
             child: Container(
               width: 243,
               height: 182,
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage("assets/products/zoom_pegasus/1.png"),
+                  image: AssetImage(image),
                   fit: BoxFit.fill,
                 ),
               ),
@@ -252,7 +261,7 @@ class _ProductCardState extends State<ProductCard> {
           Positioned(
             left: 174,
             top: 277,
-            child: Container(
+            child: SizedBox(
               width: 36,
               height: 36,
               child: Stack(
