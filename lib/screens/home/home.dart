@@ -142,6 +142,10 @@ class _HomeState extends State<Home> {
                     ),
                   ],
                 )),
+            const TabBarView(children: [
+              Icon(Icons.account_balance_wallet_sharp),
+              Icon(Icons.shape_line),
+            ])
           ]),
         ));
   }
