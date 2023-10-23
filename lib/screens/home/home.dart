@@ -135,7 +135,13 @@ class _HomeState extends State<Home> {
             Row(
               children: [
                 Image.asset('assets/icons/brands/adidas.png'),
-                Text('Adidas'),
+                SizedBox(width: 5),
+                Text(
+                  'Adidas',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
               ],
             )
 
