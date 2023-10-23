@@ -113,39 +113,6 @@ class _HomeState extends State<Home> {
             const SizedBox(height: 6),
 
             // Tab
-            DefaultTabController(
-                length: 7,
-                child: TabBar(
-                  onTap: (selectedTabIndex) {},
-                  isScrollable: true,
-                  tabs: const [
-                    Tab(
-                      child: Text('Adidas'),
-                    ),
-                    Tab(
-                      child: Text('Air Jordan'),
-                    ),
-                    Tab(
-                      child: Text('Gucci'),
-                    ),
-                    Tab(
-                      child: Text('New Balance'),
-                    ),
-                    Tab(
-                      child: Text('Nike'),
-                    ),
-                    Tab(
-                      child: Text('Puma'),
-                    ),
-                    Tab(
-                      child: Text('Reebok'),
-                    ),
-                  ],
-                )),
-            const TabBarView(children: [
-              Icon(Icons.account_balance_wallet_sharp),
-              Icon(Icons.shape_line),
-            ])
           ]),
         ));
   }
