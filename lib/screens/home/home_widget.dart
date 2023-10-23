@@ -46,25 +46,26 @@ ClipRRect advertBanner() {
   );
 }
 
-class ProductCard extends StatefulWidget {
-  const ProductCard(
-      {super.key,
-      required String productname,
-      required String categoryname,
-      required String categorycolor,
-      required String image,
-      required int price});
+class ProductCard extends StatelessWidget {
+  const ProductCard({
+    super.key,
+    required this.productname,
+    required this.categoryname,
+    required this.categorycolor,
+    required this.image,
+    required this.price,
+  });
 
-  @override
-  State<ProductCard> createState() => _ProductCardState();
-}
+  final String productname;
 
-class _ProductCardState extends State<ProductCard> {
-  late final String productname;
-  late final String categoryname;
-  late final String categorycolor;
-  late final String image;
-  late final int price;
+  final String categoryname;
+
+  final String categorycolor;
+
+  final String image;
+
+  final int price;
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(

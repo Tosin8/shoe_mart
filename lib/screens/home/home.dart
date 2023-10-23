@@ -93,7 +93,7 @@ class _HomeState extends State<Home> {
               height: 350,
               child:
                   ListView(scrollDirection: Axis.horizontal, children: const [
-                ProductCard(
+               ProductCard(
                   productname: "Nike Zoom Pegasus",
                   categoryname: "Men's Shoe",
                   categorycolor: "3 Colors",
