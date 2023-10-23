@@ -101,16 +101,43 @@ class _HomeState extends State<Home> {
                   price: 80,
                 ),
                 ProductCard(
-                  productname: "Nike Zoom Pegasus",
+                  productname: "Nike Airforce",
                   categoryname: "Men's Shoe",
-                  categorycolor: "3 Colors",
-                  image: "assets/products/zoom_pegasus/1.png",
+                  categorycolor: "2 Colors",
+                  image: "assets/products/airforce/1.png",
+                  price: 80,
+                ),
+                ProductCard(
+                  productname: "Nike Airforce",
+                  categoryname: "Men's Shoe",
+                  categorycolor: "2 Colors",
+                  image: "assets/products/airforce/1.png",
+                  price: 80,
+                ),
+                ProductCard(
+                  productname: "Nike Airforce",
+                  categoryname: "Men's Shoe",
+                  categorycolor: "2 Colors",
+                  image: "assets/products/airforce/1.png",
+                  price: 80,
+                ),
+                ProductCard(
+                  productname: "Nike Airforce",
+                  categoryname: "Men's Shoe",
+                  categorycolor: "2 Colors",
+                  image: "assets/products/airforce/1.png",
                   price: 80,
                 ),
               ]),
             ),
 
             const SizedBox(height: 6),
+            Row(
+              children: [
+                Image.asset('assets/icons/brands/adidas.png'),
+                Text('Adidas'),
+              ],
+            )
 
             // Tab
           ]),
