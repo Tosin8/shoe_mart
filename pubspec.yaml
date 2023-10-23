@@ -68,6 +68,7 @@ flutter:
     - assets/icons/bell.svg
     - assets/image/banner.jpg
     - assets/products/zoom_pegasus/1.png
+    - assets/products/airforce/1.png
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
