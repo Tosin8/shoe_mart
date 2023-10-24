@@ -145,8 +145,86 @@ class _HomeState extends State<Home> {
               ],
             ),
             // adidas product grid.
+            SizedBox(height: 6),
 
-            // Tab
+            Row(
+              children: [
+                Image.asset('assets/icons/brands/air_jordan.png'),
+                SizedBox(width: 5),
+                Text(
+                  'Adidas',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 6),
+
+            Row(
+              children: [
+                Image.asset('assets/icons/brands/gucci.png'),
+                SizedBox(width: 5),
+                Text(
+                  'Adidas',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ],
+            ),
+
+            Row(
+              children: [
+                Image.asset('assets/icons/brands/nike.png'),
+                SizedBox(width: 5),
+                Text(
+                  'Adidas',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ],
+            ),
+
+            Row(
+              children: [
+                Image.asset('assets/icons/brands/puma.png'),
+                SizedBox(width: 5),
+                Text(
+                  'Adidas',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ],
+            ),
+
+            Row(
+              children: [
+                Image.asset('assets/icons/brands/new_balance.png'),
+                SizedBox(width: 5),
+                Text(
+                  'Adidas',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ],
+            ),
+
+            Row(
+              children: [
+                Image.asset('assets/icons/brands/reebok.png'),
+                SizedBox(width: 5),
+                Text(
+                  'Adidas',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ],
+            ),
           ]),
         ));
   }
