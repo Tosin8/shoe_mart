@@ -143,7 +143,8 @@ class _HomeState extends State<Home> {
                   ),
                 ),
               ],
-            )
+            ),
+            // adidas product grid.
 
             // Tab
           ]),
