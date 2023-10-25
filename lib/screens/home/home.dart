@@ -146,6 +146,8 @@ class _HomeState extends State<Home> {
             ),
             // adidas product grid.
             const SizedBox(height: 6),
+
+            GridView(gridDelegate: gridDelegate),
             const AdidasCard(
               productimage: 'assets/products/devinbooker_basket_nike.png',
               price: '\$129.0',
