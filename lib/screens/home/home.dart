@@ -146,6 +146,7 @@ class _HomeState extends State<Home> {
             ),
             // adidas product grid.
             const SizedBox(height: 6),
+
             Container(
               width: 177,
               height: 277,
@@ -202,23 +203,6 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                   ),
-                  // Positioned(
-                  //   left: 58,
-                  //   top: 140.47,
-                  //   child: Transform(
-                  //     transform: Matrix4.identity()
-                  //       ..translate(0.0, 0.0)
-                  //       ..rotateZ(-0.57),
-                  //     child: Container(
-                  //       width: 91.31,
-                  //       height: 5.53,
-                  //       decoration: ShapeDecoration(
-                  //         color: Color(0xFFD9D9D9),
-                  //         shape: OvalBorder(),
-                  //       ),
-                  //     ),
-                  //   ),
-                  // ),
                   const Positioned(
                     left: 16,
                     top: 170,
@@ -252,6 +236,12 @@ class _HomeState extends State<Home> {
                         ),
                       ),
                     ),
+                  ),
+                  const Positioned(
+                    left: 108,
+                    top: 165,
+                    child: SizedBox(
+                        width: 18, height: 12, child: Icon(Icons.star)),
                   ),
                   const Positioned(
                     left: 132,
