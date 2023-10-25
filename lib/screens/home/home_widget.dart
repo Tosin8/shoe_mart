@@ -57,14 +57,10 @@ class ProductCard extends StatelessWidget {
   });
 
   final String productname;
-
   final String categoryname;
-
   final String categorycolor;
-
   final String image;
-
-  final int price;
+  final String price;
 
   @override
   Widget build(BuildContext context) {
@@ -226,14 +222,18 @@ class ProductCard extends StatelessWidget {
   }
 }
 
-class AdidasCard extends StatefulWidget {
-  const AdidasCard({super.key});
+class AdidasCard extends StatelessWidget {
+  const AdidasCard(
+      {super.key,
+      required this.productname,
+      required this.productimage,
+      required this.price,
+      required this.ratingCounter});
 
-  @override
-  State<AdidasCard> createState() => _AdidasCardState();
-}
-
-class _AdidasCardState extends State<AdidasCard> {
+  final String productname;
+  final String productimage;
+  final String price;
+  final String ratingCounter;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -277,9 +277,8 @@ class _AdidasCardState extends State<AdidasCard> {
                   width: 130,
                   height: 84,
                   decoration: BoxDecoration(
-                    image: const DecorationImage(
-                      image: AssetImage(
-                          "assets/products/devinbooker_basket_nike.png"),
+                    image: DecorationImage(
+                      image: AssetImage(productimage),
                       fit: BoxFit.fill,
                     ),
                     boxShadow: [
@@ -294,13 +293,13 @@ class _AdidasCardState extends State<AdidasCard> {
                 ),
               ),
             ),
-            const Positioned(
+            Positioned(
               left: 16,
               top: 170,
               child: SizedBox(
                 width: 63,
                 child: Text(
-                  '\$129.00',
+                  price.toString(),
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 16,
@@ -311,13 +310,13 @@ class _AdidasCardState extends State<AdidasCard> {
                 ),
               ),
             ),
-            const Positioned(
+            Positioned(
               left: 16,
               top: 191,
               child: SizedBox(
                 width: 93,
                 child: Text(
-                  'Nike Lebron 8',
+                  productname,
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 14,
@@ -336,13 +335,13 @@ class _AdidasCardState extends State<AdidasCard> {
                   height: 12,
                   child: Icon(Icons.star, color: Colors.yellowAccent)),
             ),
-            const Positioned(
+            Positioned(
               left: 132,
               top: 170,
               child: SizedBox(
                 width: 21,
                 child: Text(
-                  '4.8',
+                  ratingCounter,
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 14,
