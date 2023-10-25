@@ -157,7 +157,7 @@ class _HomeState extends State<Home> {
                     child: Container(
                       width: 177,
                       height: 277,
-                      decoration: BoxDecoration(color: Color(0x00D9D9D9)),
+                      decoration: const BoxDecoration(color: Color(0x00D9D9D9)),
                     ),
                   ),
                   Positioned(
@@ -167,7 +167,7 @@ class _HomeState extends State<Home> {
                       width: 174,
                       height: 154,
                       decoration: ShapeDecoration(
-                        color: Color(0xFFFCF7F7),
+                        color: const Color(0xFFFCF7F7),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(32),
                         ),
@@ -175,43 +175,51 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                   Positioned(
-                    left: 10,
+                    left: 6,
                     top: 72.87,
                     child: Transform(
                       transform: Matrix4.identity()
                         ..translate(0.0, 0.0)
                         ..rotateZ(-0.55),
                       child: Container(
-                        width: 115,
-                        height: 66,
+                        width: 130,
+                        height: 84,
                         decoration: BoxDecoration(
-                          image: DecorationImage(
+                          image: const DecorationImage(
                             image: AssetImage(
                                 "assets/products/devinbooker_basket_nike.png"),
                             fit: BoxFit.fill,
                           ),
+                          boxShadow: [
+                            const BoxShadow(
+                                    color: Color.fromARGB(255, 156, 153, 153),
+                                    spreadRadius: 1,
+                                    blurRadius: 25,
+                                    offset: Offset(0, 10))
+                                .scale(3),
+                          ],
                         ),
                       ),
                     ),
                   ),
-                  Positioned(
-                    left: 53,
-                    top: 125.47,
-                    child: Transform(
-                      transform: Matrix4.identity()
-                        ..translate(0.0, 0.0)
-                        ..rotateZ(-0.57),
-                      child: Container(
-                        width: 91.31,
-                        height: 5.53,
-                        decoration: ShapeDecoration(
-                          color: Color(0xFFD9D9D9),
-                          shape: OvalBorder(),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Positioned(
+                  // Positioned(
+                  //   left: 58,
+                  //   top: 140.47,
+                  //   child: Transform(
+                  //     transform: Matrix4.identity()
+                  //       ..translate(0.0, 0.0)
+                  //       ..rotateZ(-0.57),
+                  //     child: Container(
+                  //       width: 91.31,
+                  //       height: 5.53,
+                  //       decoration: ShapeDecoration(
+                  //         color: Color(0xFFD9D9D9),
+                  //         shape: OvalBorder(),
+                  //       ),
+                  //     ),
+                  //   ),
+                  // ),
+                  const Positioned(
                     left: 16,
                     top: 170,
                     child: SizedBox(
@@ -228,7 +236,7 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                   ),
-                  Positioned(
+                  const Positioned(
                     left: 16,
                     top: 191,
                     child: SizedBox(
@@ -245,7 +253,7 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                   ),
-                  Positioned(
+                  const Positioned(
                     left: 132,
                     top: 170,
                     child: SizedBox(
@@ -268,7 +276,7 @@ class _HomeState extends State<Home> {
                     child: Container(
                       width: 17,
                       height: 17,
-                      child: Icon(Icons.favorite_outlined),
+                      child: const Icon(Icons.favorite_outlined),
                     ),
                   ),
                 ],
