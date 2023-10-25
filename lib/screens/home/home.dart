@@ -146,6 +146,134 @@ class _HomeState extends State<Home> {
             ),
             // adidas product grid.
             const SizedBox(height: 6),
+            Container(
+              width: 177,
+              height: 277,
+              child: Stack(
+                children: [
+                  Positioned(
+                    left: 0,
+                    top: 0,
+                    child: Container(
+                      width: 177,
+                      height: 277,
+                      decoration: BoxDecoration(color: Color(0x00D9D9D9)),
+                    ),
+                  ),
+                  Positioned(
+                    left: 0,
+                    top: 0,
+                    child: Container(
+                      width: 174,
+                      height: 154,
+                      decoration: ShapeDecoration(
+                        color: Color(0xFFFCF7F7),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(32),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    left: 10,
+                    top: 72.87,
+                    child: Transform(
+                      transform: Matrix4.identity()
+                        ..translate(0.0, 0.0)
+                        ..rotateZ(-0.55),
+                      child: Container(
+                        width: 115,
+                        height: 66,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: AssetImage(
+                                "assets/products/devinbooker_basket_nike.png"),
+                            fit: BoxFit.fill,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    left: 53,
+                    top: 125.47,
+                    child: Transform(
+                      transform: Matrix4.identity()
+                        ..translate(0.0, 0.0)
+                        ..rotateZ(-0.57),
+                      child: Container(
+                        width: 91.31,
+                        height: 5.53,
+                        decoration: ShapeDecoration(
+                          color: Color(0xFFD9D9D9),
+                          shape: OvalBorder(),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    left: 16,
+                    top: 170,
+                    child: SizedBox(
+                      width: 63,
+                      child: Text(
+                        '\$129.00',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 16,
+                          fontFamily: 'Inter',
+                          fontWeight: FontWeight.w500,
+                          height: 0,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    left: 16,
+                    top: 191,
+                    child: SizedBox(
+                      width: 93,
+                      child: Text(
+                        'Nike Lebron 8',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 14,
+                          fontFamily: 'Inter',
+                          fontWeight: FontWeight.w400,
+                          height: 0,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    left: 132,
+                    top: 170,
+                    child: SizedBox(
+                      width: 21,
+                      child: Text(
+                        '4.8',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 14,
+                          fontFamily: 'Inter',
+                          fontWeight: FontWeight.w300,
+                          height: 0,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    left: 25,
+                    top: 20,
+                    child: Container(
+                      width: 17,
+                      height: 17,
+                      child: Icon(Icons.favorite_outlined),
+                    ),
+                  ),
+                ],
+              ),
+            )
           ]),
         ));
   }
