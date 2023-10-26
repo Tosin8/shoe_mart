@@ -239,8 +239,8 @@ class AdidasCard extends StatelessWidget {
     return GestureDetector(
       onTap: () {},
       child: Container(
-        // width: 177,
-        // height: 277,
+        width: 177,
+        height: 277,
         child: Stack(
           children: [
             Positioned(
@@ -339,7 +339,7 @@ class AdidasCard extends StatelessWidget {
               left: 132,
               top: 170,
               child: SizedBox(
-               // width: 21,
+                // width: 21,
                 child: Text(
                   ratingCounter,
                   style: TextStyle(
