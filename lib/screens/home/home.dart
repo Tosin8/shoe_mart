@@ -146,49 +146,65 @@ class _HomeState extends State<Home> {
             ),
             // adidas product grid.
             const SizedBox(height: 6),
-
-            Expanded(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 3),
-                child: GridView(
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
-                      mainAxisSpacing: 20.0,
-                      crossAxisSpacing: 20.0,
-                      childAspectRatio: 0.75),
-                  children: const [
-                    AdidasCard(
-                      productimage:
-                          'assets/products/devinbooker_basket_nike.png',
-                      price: '\$129.0',
-                      productname: 'Nike Lebron 8',
-                      ratingCounter: '4.8',
-                    ),
-                    AdidasCard(
-                      productimage:
-                          'assets/products/devinbooker_basket_nike.png',
-                      price: '\$129.0',
-                      productname: 'Nike Lebron 8',
-                      ratingCounter: '4.8',
-                    ),
-                    AdidasCard(
-                      productimage:
-                          'assets/products/devinbooker_basket_nike.png',
-                      price: '\$129.0',
-                      productname: 'Nike Lebron 8',
-                      ratingCounter: '4.8',
-                    ),
-                    AdidasCard(
-                      productimage:
-                          'assets/products/devinbooker_basket_nike.png',
-                      price: '\$129.0',
-                      productname: 'Nike Lebron 8',
-                      ratingCounter: '4.8',
-                    ),
-                  ],
+            Column(
+              children: [
+                AdidasCard(
+                  productimage: 'assets/products/devinbooker_basket_nike.png',
+                  price: '\$129.0',
+                  productname: 'Nike Lebron 8',
+                  ratingCounter: '4.8',
                 ),
-              ),
-            ),
+                AdidasCard(
+                  productimage: 'assets/products/devinbooker_basket_nike.png',
+                  price: '\$129.0',
+                  productname: 'Nike Lebron 8',
+                  ratingCounter: '4.8',
+                ),
+              ],
+            )
+
+            // Expanded(
+            //   child: Padding(
+            //     padding: const EdgeInsets.symmetric(horizontal: 3),
+            //     child: GridView(
+            //       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            //           crossAxisCount: 2,
+            //           mainAxisSpacing: 20.0,
+            //           crossAxisSpacing: 20.0,
+            //           childAspectRatio: 0.75),
+            //       children: const [
+            //         AdidasCard(
+            //           productimage:
+            //               'assets/products/devinbooker_basket_nike.png',
+            //           price: '\$129.0',
+            //           productname: 'Nike Lebron 8',
+            //           ratingCounter: '4.8',
+            //         ),
+            //         AdidasCard(
+            //           productimage:
+            //               'assets/products/devinbooker_basket_nike.png',
+            //           price: '\$129.0',
+            //           productname: 'Nike Lebron 8',
+            //           ratingCounter: '4.8',
+            //         ),
+            //         AdidasCard(
+            //           productimage:
+            //               'assets/products/devinbooker_basket_nike.png',
+            //           price: '\$129.0',
+            //           productname: 'Nike Lebron 8',
+            //           ratingCounter: '4.8',
+            //         ),
+            //         AdidasCard(
+            //           productimage:
+            //               'assets/products/devinbooker_basket_nike.png',
+            //           price: '\$129.0',
+            //           productname: 'Nike Lebron 8',
+            //           ratingCounter: '4.8',
+            //         ),
+            //       ],
+            //     ),
+            //   ),
+            // ),
           ]),
         ));
   }
