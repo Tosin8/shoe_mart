@@ -239,16 +239,16 @@ class AdidasCard extends StatelessWidget {
     return GestureDetector(
       onTap: () {},
       child: Container(
-        width: 177,
-        height: 277,
+        // width: 177,
+        // height: 277,
         child: Stack(
           children: [
             Positioned(
               left: 0,
               top: 0,
               child: Container(
-                width: 177,
-                height: 277,
+                // width: 177,
+                // height: 277,
                 decoration: const BoxDecoration(color: Color(0x00D9D9D9)),
               ),
             ),
@@ -256,8 +256,8 @@ class AdidasCard extends StatelessWidget {
               left: 0,
               top: 0,
               child: Container(
-                width: 174,
-                height: 154,
+                // width: 174,
+                // height: 154,
                 decoration: ShapeDecoration(
                   color: const Color(0xFFFCF7F7),
                   shape: RoundedRectangleBorder(
@@ -274,8 +274,8 @@ class AdidasCard extends StatelessWidget {
                   ..translate(0.0, 0.0)
                   ..rotateZ(-0.55),
                 child: Container(
-                  width: 130,
-                  height: 84,
+                  // width: 130,
+                  // height: 84,
                   decoration: BoxDecoration(
                     image: DecorationImage(
                       image: AssetImage(productimage),
@@ -314,7 +314,7 @@ class AdidasCard extends StatelessWidget {
               left: 16,
               top: 191,
               child: SizedBox(
-                width: 93,
+                //  width: 93,
                 child: Text(
                   productname,
                   style: TextStyle(
@@ -331,15 +331,15 @@ class AdidasCard extends StatelessWidget {
               left: 108,
               top: 165,
               child: SizedBox(
-                  width: 18,
-                  height: 12,
+                  // width: 18,
+                  // height: 12,
                   child: Icon(Icons.star, color: Colors.yellowAccent)),
             ),
             Positioned(
               left: 132,
               top: 170,
               child: SizedBox(
-                width: 21,
+               // width: 21,
                 child: Text(
                   ratingCounter,
                   style: TextStyle(
