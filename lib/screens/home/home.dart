@@ -1,3 +1,4 @@
+import 'package:bubble_bottom_bar/bubble_bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shoe_store/extensions/constants.dart';
@@ -50,18 +51,21 @@ class _HomeState extends State<Home> {
             ]),
           ], // remove back button in appbar.
         ),
+        bottomNavigationBar: BubbleBottomBar(
+          hasNotch: true, fabLocation: BubbleBottomBarFabLocation.end,
+          ),
         body: Padding(
           padding: const EdgeInsets.all(10.0),
           child: ListView(children: [
             const Text(
               'Shoes Collections',
               style: TextStyle(
-                  fontSize: 18,
+                  fontSize: 22,
                   fontWeight: FontWeight.bold,
                   color: kAccentColor),
             ),
             const Text('The best of shoes in one place!',
-                style: TextStyle(color: kAccentColor)),
+                style: TextStyle(color: kAccentColor, fontSize: 16)),
             const SizedBox(height: 10),
             searchBtn(searchController: _searchController),
             const SizedBox(height: 10),
