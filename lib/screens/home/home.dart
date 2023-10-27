@@ -146,7 +146,7 @@ class _HomeState extends State<Home> {
             ),
             // adidas product grid.
             const SizedBox(height: 6),
-            Column(
+            Row(
               children: [
                 AdidasCard(
                   productimage: 'assets/products/devinbooker_basket_nike.png',
