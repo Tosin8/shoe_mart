@@ -146,7 +146,7 @@ class _HomeState extends State<Home> {
             ),
             // adidas product grid.
             const SizedBox(height: 6),
-            Row(
+            const Row(
               children: [
                 AdidasCard(
                   productimage: 'assets/products/devinbooker_basket_nike.png',
@@ -154,6 +154,7 @@ class _HomeState extends State<Home> {
                   productname: 'Nike Lebron 8',
                   ratingCounter: '4.8',
                 ),
+                SizedBox(width: 10),
                 AdidasCard(
                   productimage: 'assets/products/devinbooker_basket_nike.png',
                   price: '\$129.0',
