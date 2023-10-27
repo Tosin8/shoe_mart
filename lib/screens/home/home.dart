@@ -146,7 +146,6 @@ class _HomeState extends State<Home> {
             ),
             // adidas product grid.
             const SizedBox(height: 6),
-            
 
             // Expanded(
             //   child: Padding(
