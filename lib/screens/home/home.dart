@@ -19,7 +19,10 @@ void _onItemTapped(int index) {
   });
 }
 
-const List _pages = [];
+const List _pages = [
+  Home(),
+  
+];
 
 class _HomeState extends State<Home> {
   final TextEditingController _searchController = TextEditingController();
