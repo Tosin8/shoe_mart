@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shoe_store/extensions/constants.dart';
+import 'package:shoe_store/screens/cart/cart.dart';
+import 'package:shoe_store/screens/save/save.dart';
 
+import '../user/user.dart';
 import 'home_widget.dart';
 
 class Home extends StatefulWidget {
@@ -10,19 +13,6 @@ class Home extends StatefulWidget {
   @override
   State<Home> createState() => _HomeState();
 }
-
-int _selectedIndex = 0;
-
-void _onItemTapped(int index) {
-  setState(() {
-    _selectedIndex = index;
-  });
-}
-
-const List _pages = [
-  Home(),
-  
-];
 
 class _HomeState extends State<Home> {
   final TextEditingController _searchController = TextEditingController();
@@ -63,20 +53,7 @@ class _HomeState extends State<Home> {
             ]),
           ], // remove back button in appbar.
         ),
-        bottomNavigationBar: BottomNavigationBar(
-          type: BottomNavigationBarType.fixed, // to make it stable.
-          items: const [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.favorite), label: 'Saved Items'),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.shopping_bag), label: 'Cart'),
-            BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
-          ],
-
-          currentIndex: _selectedIndex,
-          onTap: _onItemTapped,
-        ),
+       
         body: Padding(
           padding: const EdgeInsets.all(10.0),
           child: ListView(children: [
