@@ -11,6 +11,16 @@ class Home extends StatefulWidget {
   State<Home> createState() => _HomeState();
 }
 
+int _selectedIndex = 0;
+
+void _onItemTapped(int index) {
+  setState(() {
+    _selectedIndex = index;
+  });
+}
+
+const List _pages = [];
+
 class _HomeState extends State<Home> {
   final TextEditingController _searchController = TextEditingController();
   @override
