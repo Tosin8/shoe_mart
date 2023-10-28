@@ -1,4 +1,3 @@
-import 'package:bubble_bottom_bar/bubble_bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shoe_store/extensions/constants.dart';
@@ -51,9 +50,14 @@ class _HomeState extends State<Home> {
             ]),
           ], // remove back button in appbar.
         ),
-        bottomNavigationBar: BubbleBottomBar(
-          hasNotch: true, fabLocation: BubbleBottomBarFabLocation.end,
-          ),
+        bottomNavigationBar: BottomNavigationBar(items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.favorite), label: 'Saved Items'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.shopping_bag), label: 'Cart'),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
+        ]),
         body: Padding(
           padding: const EdgeInsets.all(10.0),
           child: ListView(children: [
