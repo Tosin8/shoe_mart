@@ -50,14 +50,20 @@ class _HomeState extends State<Home> {
             ]),
           ], // remove back button in appbar.
         ),
-        bottomNavigationBar: BottomNavigationBar(items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.favorite), label: 'Saved Items'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.shopping_bag), label: 'Cart'),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
-        ]),
+        bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed, // to make it stable.
+          items: const [
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.favorite), label: 'Saved Items'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.shopping_bag), label: 'Cart'),
+            BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
+          ],
+
+          currentIndex: _selectedIndex,
+          onTap: _onItemTapped,
+        ),
         body: Padding(
           padding: const EdgeInsets.all(10.0),
           child: ListView(children: [
