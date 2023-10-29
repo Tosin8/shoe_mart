@@ -53,7 +53,6 @@ class _HomeState extends State<Home> {
             ]),
           ], // remove back button in appbar.
         ),
-       
         body: Padding(
           padding: const EdgeInsets.all(10.0),
           child: ListView(children: [
@@ -149,7 +148,24 @@ class _HomeState extends State<Home> {
               ],
             ),
             // adidas product grid.
-            const SizedBox(height: 6),
+            const SizedBox(height: 15),
+
+            Row(
+              children: [
+                Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        image: const DecorationImage(
+                          image: AssetImage(
+                              'assets/products/devinbooker_basket_nike.png'),
+                          fit: BoxFit.cover,
+                        )),
+                    child: Transform.translate(
+                      offset: Offset(50, -40),
+                      child: Icon(Icons.favorite_border_outlined),
+                    ))
+              ],
+            )
 
             // Expanded(
             //   child: Padding(
