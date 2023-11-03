@@ -13,9 +13,9 @@ class ScreenPages extends StatefulWidget {
 }
 
 class _ScreenPagesState extends State<ScreenPages> {
-  int _currentIndex = 0;
+  int currentIndex = 0;
 
-  final List _pages = const [
+  final List screens = const [
     Home(),
     SaveItem(),
     Cart(),
@@ -24,15 +24,27 @@ class _ScreenPagesState extends State<ScreenPages> {
 
   void _onItemTapped(int index) {
     setState(() {
-      _currentIndex = index;
+      currentIndex = index;
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      body: screens[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed, // to make it stable.
+        type: BottomNavigationBarType.fixed,
+        // to make it stable.
+        currentIndex: currentIndex,
+        onTap: (value) {
+          setState(
+            () {
+              currentIndex = value;
+            },
+          );
+        },
+        selectedItemColor: Colors.blueAccent,
+        unselectedItemColor: Colors.grey,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
           BottomNavigationBarItem(
@@ -41,11 +53,7 @@ class _ScreenPagesState extends State<ScreenPages> {
               icon: Icon(Icons.shopping_bag), label: 'Cart'),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
         ],
-
-        currentIndex: _currentIndex,
-        onTap: _onItemTapped,
       ),
-      body: _pages.elementAt(_currentIndex),
     );
   }
 }

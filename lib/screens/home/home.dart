@@ -14,14 +14,6 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   final TextEditingController _searchController = TextEditingController();
 
-  final List<String> _adidaslistItem = [
-    'assets/products/adidas/1.jpg',
-    'assets/products/adidas/2.jpg',
-    'assets/products/adidas/3.jpg',
-    'assets/products/adidas/4.jpg',
-    'assets/products/adidas/5.jpg',
-    'assets/products/adidas/6.jpg'
-  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -156,25 +148,25 @@ class _HomeState extends State<Home> {
             ),
             // adidas product grid.
             const SizedBox(height: 15),
-            Expanded(
-                child: GridView.count(
-              crossAxisCount: 2,
-              mainAxisSpacing: 10,
-              crossAxisSpacing: 10,
-              padding: const EdgeInsets.all(8),
-              children: _adidaslistItem
-                  .map((item) => Card(
-                        color: Colors.transparent,
-                        elevation: 0,
-                        child: Container(
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                              image: DecorationImage(
-                                  image: AssetImage(item), fit: BoxFit.cover)),
-                        ),
-                      ))
-                  .toList(),
-            ))
+            // Expanded(
+            //     child: GridView.count(
+            //   crossAxisCount: 2,
+            //   mainAxisSpacing: 10,
+            //   crossAxisSpacing: 10,
+            //   padding: const EdgeInsets.all(8),
+            //   children: _adidaslistItem
+            //       .map((item) => Card(
+            //             color: Colors.transparent,
+            //             elevation: 0,
+            //             child: Container(
+            //               decoration: BoxDecoration(
+            //                   borderRadius: BorderRadius.circular(20),
+            //                   image: DecorationImage(
+            //                       image: AssetImage(item), fit: BoxFit.cover)),
+            //             ),
+            //           ))
+            //       .toList(),
+            // ))
           ]),
         ));
   }

@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:shoe_store/screens.dart';
 import 'package:shoe_store/screens/home/home.dart';
 
 import 'forms/login/login.dart';
@@ -41,7 +42,8 @@ class _SplashScreenState extends State<SplashScreen>
               Navigator.push(
                   context,
                   PageTransition(
-                      child: const Home(), type: PageTransitionType.fade));
+                      child: const ScreenPages(),
+                      type: PageTransitionType.fade));
             }
           });
   }
