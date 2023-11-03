@@ -15,7 +15,12 @@ class _HomeState extends State<Home> {
   final TextEditingController _searchController = TextEditingController();
 
   final List<String> _adidaslistItem = [
-    
+    'assets/products/adidas/1.jpg',
+    'assets/products/adidas/2.jpg',
+    'assets/products/adidas/3.jpg',
+    'assets/products/adidas/4.jpg',
+    'assets/products/adidas/5.jpg',
+    'assets/products/adidas/6.jpg'
   ];
   @override
   Widget build(BuildContext context) {

@@ -73,6 +73,12 @@ flutter:
     - assets/products/zoom_pegasus/1.png
     - assets/products/airforce/1.png
     - assets/products/devinbooker_basket_nike.png
+    - assets/products/adidas/1.jpg
+    - assets/products/adidas/2.jpg
+    - assets/products/adidas/3.jpg
+    - assets/products/adidas/4.jpg
+    - assets/products/adidas/5.jpg
+    - assets/products/adidas/6.jpg
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
