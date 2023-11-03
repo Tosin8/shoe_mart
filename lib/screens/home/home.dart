@@ -59,9 +59,9 @@ class _HomeState extends State<Home> {
             ]),
           ], // remove back button in appbar.
         ),
-        body: Padding(
+        body: Container(
           padding: const EdgeInsets.all(10.0),
-          child: ListView(children: [
+          child: Column(children: [
             const Text(
               'Shoes Collections',
               style: TextStyle(
@@ -74,6 +74,7 @@ class _HomeState extends State<Home> {
             const SizedBox(height: 10),
             searchBtn(searchController: _searchController),
             const SizedBox(height: 10),
+
             advertBanner(),
             const SizedBox(height: 15),
 
@@ -155,7 +156,25 @@ class _HomeState extends State<Home> {
             ),
             // adidas product grid.
             const SizedBox(height: 15),
-            Expanded(child: GridView.count(crossAxisCount: 2, mainAxisSpacing: 10, crossAxisSpacing: 10,))
+            Expanded(
+                child: GridView.count(
+              crossAxisCount: 2,
+              mainAxisSpacing: 10,
+              crossAxisSpacing: 10,
+              padding: const EdgeInsets.all(8),
+              children: _adidaslistItem
+                  .map((item) => Card(
+                        color: Colors.transparent,
+                        elevation: 0,
+                        child: Container(
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              image: DecorationImage(
+                                  image: AssetImage(item), fit: BoxFit.cover)),
+                        ),
+                      ))
+                  .toList(),
+            ))
           ]),
         ));
   }
