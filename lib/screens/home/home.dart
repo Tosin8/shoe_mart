@@ -51,9 +51,8 @@ class _HomeState extends State<Home> {
             ]),
           ], // remove back button in appbar.
         ),
-        body: Container(
-          padding: const EdgeInsets.all(10.0),
-          child: Column(children: [
+        body: ListView(padding: const EdgeInsets.all(10.0), children: [
+          Column(children: [
             const Text(
               'Shoes Collections',
               style: TextStyle(
@@ -167,7 +166,15 @@ class _HomeState extends State<Home> {
             //           ))
             //       .toList(),
             // ))
+            Expanded(
+                child: GridView.builder(
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 2,
+                        childAspectRatio: (100 / 140),
+                        crossAxisSpacing: 12,
+                        mainAxisSpacing: 12),
+                    itemBuilder: itemBuilder))
           ]),
-        ));
+        ]));
   }
 }
