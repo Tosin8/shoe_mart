@@ -155,6 +155,7 @@ class _HomeState extends State<Home> {
             ),
             // adidas product grid.
             const SizedBox(height: 15),
+            Expanded(child: GridView.count(crossAxisCount: 2, mainAxisSpacing: 10, crossAxisSpacing: 10,))
           ]),
         ));
   }
