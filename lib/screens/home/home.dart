@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shoe_store/extensions/constants.dart';
-import 'package:shoe_store/screens/cart/cart.dart';
-import 'package:shoe_store/screens/save/save.dart';
 
-import '../user/user.dart';
 import 'home_widget.dart';
 
 class Home extends StatefulWidget {
@@ -16,6 +13,10 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   final TextEditingController _searchController = TextEditingController();
+
+  final List<String> _adidaslistItem = [
+    
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
