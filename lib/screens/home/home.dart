@@ -136,21 +136,20 @@ class _HomeState extends State<Home> {
           ]),
         ),
 
-        const SizedBox(height: 6),
-        Row(
-          children: [
-            Image.asset('assets/icons/brands/adidas.png'),
-            const SizedBox(width: 5),
-            const Text(
-              'Adidas',
-              style: TextStyle(
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-          ],
-        ),
+        // const SizedBox(height: 6),
+        // Row(
+        //   children: [
+        //     Image.asset('assets/icons/brands/adidas.png'),
+        //     const SizedBox(width: 5),
+        //     const Text(
+        //       'Adidas',
+        //       style: TextStyle(
+        //         fontWeight: FontWeight.w500,
+        //       ),
+        //     ),
+        //   ],
+        // ),
         // adidas product grid.
-        const SizedBox(height: 15),
       ]),
     );
   }
