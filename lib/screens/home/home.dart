@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shoe_store/extensions/constants.dart';
+import 'package:staggered_grid_view_flutter/widgets/staggered_grid_view.dart';
 
 import 'home_widget.dart';
 
@@ -59,7 +60,7 @@ class _HomeState extends State<Home> {
           ]),
         ], // remove back button in appbar.
       ),
-      body: Column(children: [
+      body: ListView(children: [
         const Text(
           'Shoes Collections',
           style: TextStyle(
@@ -136,20 +137,26 @@ class _HomeState extends State<Home> {
           ]),
         ),
 
-        // const SizedBox(height: 6),
-        // Row(
-        //   children: [
-        //     Image.asset('assets/icons/brands/adidas.png'),
-        //     const SizedBox(width: 5),
-        //     const Text(
-        //       'Adidas',
-        //       style: TextStyle(
-        //         fontWeight: FontWeight.w500,
-        //       ),
-        //     ),
-        //   ],
-        // ),
-        // adidas product grid.
+        const SizedBox(height: 6),
+        Row(
+          children: [
+            Image.asset('assets/icons/brands/adidas.png'),
+            const SizedBox(width: 5),
+            const Text(
+              'Adidas',
+              style: TextStyle(
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+          ],
+        ),
+        //adidas product grid.
+
+        StaggeredGridView.count(
+          crossAxisCount: 2,
+          mainAxisSpacing: 2,
+          crossAxisSpacing: 2,
+        )
       ]),
     );
   }

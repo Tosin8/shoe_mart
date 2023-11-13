@@ -28,16 +28,17 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  add_to_cart_animation: ^2.0.3
   animated_button: ^0.2.0
   animated_text_kit: ^4.2.2
+  bubble_bottom_bar: ^2.0.0
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
-  page_transition: ^2.1.0
   flutter_svg: ^2.0.7
   loading_animation_widget: ^1.2.0+4
-  add_to_cart_animation: ^2.0.3
-  bubble_bottom_bar: ^2.0.0
+  page_transition: ^2.1.0
+  staggered_grid_view_flutter: ^0.0.4
 
 dev_dependencies:
   flutter_lints: ^2.0.0
