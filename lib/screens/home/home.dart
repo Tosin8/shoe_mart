@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shoe_store/extensions/constants.dart';
 import 'package:staggered_grid_view_flutter/widgets/staggered_grid_view.dart';
@@ -156,6 +157,12 @@ class _HomeState extends State<Home> {
           crossAxisCount: 2,
           mainAxisSpacing: 2,
           crossAxisSpacing: 2,
+          children: [
+            StaggeredGridTile.count(
+              crossAxisCellCount: 2,
+              mainAxisCellCount: 2,
+            )
+          ],
         )
       ]),
     );
